@@ -1,0 +1,35 @@
+name: 'Homepage'
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+jobs:
+  checkout-repository:
+    runs-on: [traefik]
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          repository: 'Actuary-LLC/homepage'
+          ref: 'main'       
+  deploy-authentik:
+    needs: checkout-repository
+    runs-on: [traefik]
+    #env:
+      #AUTHENTIK_POSTGRESQL__USER: ${{ vars.POSTGRES_USER }}
+      #AUTHENTIK_POSTGRESQL__PASSWORD: ${{ secrets.POSTGRES_PASSWORD }}
+      #AUTHENTIK_SECRET_KEY: ${{ secrets.AUTHENTIK_SECRET_KEY }}
+      #HOMEPAGE_API_TOKEN: ${{ secrets.HOMEPAGE_API_TOKEN }}
+    steps:
+      - name: Remove and redeploy services
+        run: |
+          SERVICES=("service_task") 
+          for SERVICE_NAME in "${SERVICES[@]}"; do
+            if docker service ls | grep -q $SERVICE_NAME; then
+              docker service rm $SERVICE_NAME;
+              echo "Service $SERVICE_NAME removed."
+            else echo "Service $SERVICE_NAME is not running."
+            fi
+          done
+      - run: docker stack deploy -c homepage.yaml homepage
