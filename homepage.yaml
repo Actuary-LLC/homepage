@@ -8,13 +8,18 @@ configs:
   docker_yaml:
     name: docker_yaml_${TAG}
     file: ./docker.yaml
+  bookmarks_yaml:
+    name: bookmarks_yaml_${TAG}
+    file: ./bookmarks.yaml
 
 services:
   homepage:
     image: ghcr.io/gethomepage/homepage:latest
     configs:
-      - source: static
+      - source: docker_yaml
         target: /app/config/docker.yaml
+      - source: bookmarks_yaml
+        target: /app/config/bookmarks.yaml
     ports:
       - 3000:3000
     volumes:
