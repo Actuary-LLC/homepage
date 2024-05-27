@@ -4,9 +4,17 @@ networks:
   reverse-proxy:
     external: true
 
+configs:
+  docker_yaml:
+    name: docker_yaml_${TAG}
+    file: ./docker.yaml
+
 services:
   homepage:
     image: ghcr.io/gethomepage/homepage:latest
+    configs:
+      - source: static
+        target: /app/config/docker.yaml
     ports:
       - 3000:3000
     volumes:
