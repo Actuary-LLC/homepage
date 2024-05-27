@@ -23,7 +23,7 @@ services:
     ports:
       - 3000:3000
     volumes:
-      - /mnt/user/docker/volumes/homepage:/app/config # Make sure your local config directory exists
+      - /mnt/user/docker/volumes/homepage/logs:/app/config/logs # Make sure your local config directory exists
       - /var/run/docker.sock:/var/run/docker.sock # (optional) For docker integrations, see alternative methods
     environment:
       PUID: 99
