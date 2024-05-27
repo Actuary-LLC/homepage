@@ -1,0 +1,21 @@
+---
+# For configuration options and examples, please see:
+# https://gethomepage.dev/latest/configs/bookmarks
+
+- Developer:
+    - Personal:
+        - abbr: GH
+          href: https://github.com/AlexanderTroyScott/
+    - LLC:
+        - abbr: GH
+          href: https://github.com/Actuary-LLC/
+
+- Social:
+    - Reddit:
+        - abbr: RE
+          href: https://reddit.com/
+
+- Entertainment:
+    - YouTube:
+        - abbr: YT
+          href: https://youtube.com/
