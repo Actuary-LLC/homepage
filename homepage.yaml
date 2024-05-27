@@ -5,21 +5,37 @@ networks:
     external: true
 
 configs:
-  docker_yaml:
-    name: docker_yaml_${TAG}
-    file: ./docker.yaml
-  bookmarks_yaml:
-    name: bookmarks_yaml_${TAG}
+  settings:
+    name: settings_${TAG}
+    file: ./settings.yaml
+  bookmarks:
+    name: bookmarks_${TAG}
     file: ./bookmarks.yaml
+  widgets:
+    name: widgets_${TAG}
+    file: ./widgets.yaml
+  services:
+    name: services_${TAG}
+    file: ./services.yaml
+  docker:
+    name: docker_${TAG}
+    file: ./docker.yaml
+
 
 services:
   homepage:
     image: ghcr.io/gethomepage/homepage:latest
     configs:
-      - source: docker_yaml
+      - source: docker
         target: /app/config/docker.yaml
-      - source: bookmarks_yaml
+      - source: bookmarks
         target: /app/config/bookmarks.yaml
+      - source: settings
+        target: /app/config/settings.yaml
+      - source: widgets
+        target: /app/config/widgets.yaml
+      - source: services
+        target: /app/config/services.yaml
     ports:
       - 3000:3000
     volumes:
