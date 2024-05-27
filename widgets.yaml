@@ -6,7 +6,12 @@
     cpu: true
     memory: true
     disk: /
-
+    
+- weather:
+    latitude: ${LATITUDE}
+    longitude: ${LONGITUDE}
+    provider: weatherapi
+    
 - search:
     provider: duckduckgo
     target: _blank
