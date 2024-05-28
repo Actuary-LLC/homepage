@@ -8,7 +8,3 @@
 my-docker:
   socket: /var/run/docker.sock
   swarm: true
-  
-task:
-  socket: /var/run/docker.sock
-  swarm: true
