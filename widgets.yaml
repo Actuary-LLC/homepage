@@ -19,3 +19,6 @@
 - search:
     provider: duckduckgo
     target: _blank
+
+- logo:
+    icon: https://raw.githubusercontent.com/Actuary-LLC/homepage/main/images/Actuary_Graphic.png
