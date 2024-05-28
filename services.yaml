@@ -2,17 +2,12 @@
 # For configuration options and examples, please see:
 # https://gethomepage.dev/latest/configs/services
 
-- My First Group:
-    - My First Service:
-        href: http://localhost/
-        description: Homepage is awesome
+- Unraid:
+    - Databases:
+        href: http://192.168.2.2:8080
+        description: Adminer to access postgres
 
 - My Second Group:
     - My Second Service:
         href: http://localhost/
         description: Homepage is the best
-
-- My Third Group:
-    - My Third Service:
-        href: http://localhost/
-        description: Homepage is 😎
