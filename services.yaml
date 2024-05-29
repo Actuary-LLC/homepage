@@ -22,6 +22,24 @@
           diskUnits: bytes
           refreshInterval: 5000
           pointsLimit: 15
+    - ZFS Pool:
+        widget:
+          type: glances
+          url: http://192.168.2.2:61208
+          metric: fs:/mnt/ssd
+          version: 4
+          diskUnits: bytes
+          refreshInterval: 5000
+          pointsLimit: 15
+    - Array:
+        widget:
+          type: glances
+          url: http://192.168.2.2:61208
+          metric: fs:/mnt/user/library
+          version: 4
+          diskUnits: bytes
+          refreshInterval: 5000
+          pointsLimit: 15
     - Network Usage:
         widget:
           type: glances
