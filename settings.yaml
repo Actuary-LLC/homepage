@@ -16,10 +16,10 @@ background:
 
 cardBlur: sm # sm, "", md, etc... see https://tailwindcss.com/docs/backdrop-blur
 
-Home Management & Info:
-  icon: home-assistant.png
-Server Tools:
-  icon: https://cdn-icons-png.flaticon.com/512/252/252035.png
+#Home Management & Info:
+#  icon: home-assistant.png
+#Server Tools:
+#  icon: https://cdn-icons-png.flaticon.com/512/252/252035.png
 
 providers:
   openweathermap: ${OPENWEATHER_API_TOKEN}
