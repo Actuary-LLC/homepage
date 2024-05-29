@@ -1,13 +1,9 @@
 ---
 # For configuration options and examples, please see:
 # https://gethomepage.dev/latest/configs/settings
-
-
-#favicon: https://www.google.com/favicon.ico
-
 title: Server
 
-favicon: https://www.google.com/favicon.ico
+favicon: https://github.com/Actuary-LLC/homepage/blob/main/images/icons8-favicon.gif?raw=true
 
 theme: dark # or light
 
