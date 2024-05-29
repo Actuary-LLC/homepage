@@ -5,6 +5,10 @@
 
 #favicon: https://www.google.com/favicon.ico
 
+title: Server
+
+favicon: https://www.google.com/favicon.ico
+
 theme: dark # or light
 
 background:
@@ -13,6 +17,13 @@ background:
   saturate: 50 # 0, 50, 100... see https://tailwindcss.com/docs/backdrop-saturate
   brightness: 0 # 0, 50, 75... see https://tailwindcss.com/docs/backdrop-brightness
   opacity: 50 # 0-100
+
+cardBlur: sm # sm, "", md, etc... see https://tailwindcss.com/docs/backdrop-blur
+
+Home Management & Info:
+  icon: home-assistant.png
+Server Tools:
+  icon: https://cdn-icons-png.flaticon.com/512/252/252035.png
 
 providers:
   openweathermap: ${OPENWEATHER_API_TOKEN}
