@@ -3,7 +3,7 @@
 # https://gethomepage.dev/latest/configs/settings
 title: Server
 
-favicon: https://raw.githubusercontent.com/Actuary-LLC/homepage/main/images/icons8-favicon.gif
+favicon: https://raw.githubusercontent.com/Actuary-LLC/homepage/main/images/favicon.ico
 
 theme: dark # or light
 
