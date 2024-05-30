@@ -7,7 +7,10 @@
 #        href: http://192.168.2.2:8080
 #        description: Adminer to access postgres
 #        icon: https://raw.githubusercontent.com/Actuary-LLC/homepage/5ee29b69f6c410ffaaa6f374680a996f50557c52/images/unraid.svg
-
+layout:
+  Unraid:
+    style: row
+    columns: 4
 - Unraid:
     - NAS:
         icon: https://raw.githubusercontent.com/Actuary-LLC/homepage/5ee29b69f6c410ffaaa6f374680a996f50557c52/images/unraid.svg
