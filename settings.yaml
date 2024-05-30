@@ -25,6 +25,9 @@ providers:
 
 layout:
   Unraid:
+    tab: First
     icon: https://raw.githubusercontent.com/Actuary-LLC/homepage/5ee29b69f6c410ffaaa6f374680a996f50557c52/images/unraid.svg
     style: row
     columns: 4
+  Media:
+    tab: Second
