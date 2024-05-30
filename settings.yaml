@@ -16,8 +16,8 @@ background:
 
 cardBlur: sm # sm, "", md, etc... see https://tailwindcss.com/docs/backdrop-blur
 
-#Home Management & Info:
-#  icon: home-assistant.png
+Unraid:
+  icon: https://raw.githubusercontent.com/Actuary-LLC/homepage/5ee29b69f6c410ffaaa6f374680a996f50557c52/images/unraid.svg
 #Server Tools:
 #  icon: https://cdn-icons-png.flaticon.com/512/252/252035.png
 
