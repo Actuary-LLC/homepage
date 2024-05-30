@@ -44,7 +44,7 @@
         widget:
           type: glances
           url: http://192.168.2.2:61208
-          metric: fs:shfs
+          metric: disk:shfs
           version: 4
           diskUnits: bytes
           refreshInterval: 5000
