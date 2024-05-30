@@ -25,11 +25,11 @@ providers:
 
 layout:
   Security:
-    tab: Services
+    tab: Containers
   Productivity:
-    tab: Services
+    tab: Containers
   Media:
-    tab: Services
+    tab: Containers
     style: row
     columns: 4
   Unraid:
