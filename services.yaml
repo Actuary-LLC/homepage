@@ -22,6 +22,12 @@
           diskUnits: bytes
           refreshInterval: 5000
           pointsLimit: 15
+    - Processes:
+        widget:
+          type: glances
+          url: http://192.168.2.2:61208
+          metric: process
+          version: 4
     - Network Usage:
         widget:
           type: glances
