@@ -13,39 +13,39 @@
         icon: https://raw.githubusercontent.com/Actuary-LLC/homepage/5ee29b69f6c410ffaaa6f374680a996f50557c52/images/unraid.svg
         href: unraid.lan
         description: Networked Attached Storage (NAS)
-    - CPU Usage:
-        widget:
-          type: glances
-          url: http://192.168.2.2:61208
-          version: 4
-          metric: cpu
-          diskUnits: bytes
-          refreshInterval: 5000
-          pointsLimit: 15
-    - Network Usage:
-        widget:
-          type: glances
-          url: http://192.168.2.2:61208
-          metric: network:eth1
-          version: 4
-          diskUnits: bytes
-          refreshInterval: 5000
-          pointsLimit: 15
-    - ZFS Pool:
-        widget:
-          type: glances
-          url: http://192.168.2.2:61208
-          metric: fs:/mnt/ssd
-          version: 4
-          diskUnits: bytes
-          refreshInterval: 5000
-          pointsLimit: 15
-    - Array:
-        widget:
-          type: glances
-          url: http://192.168.2.2:61208
-          metric: fs:/mnt/user/library
-          version: 4
-          diskUnits: bytes
-          refreshInterval: 5000
-          pointsLimit: 15
+      - CPU Usage:
+          widget:
+            type: glances
+            url: http://192.168.2.2:61208
+            version: 4
+            metric: cpu
+            diskUnits: bytes
+            refreshInterval: 5000
+            pointsLimit: 15
+      - Network Usage:
+          widget:
+            type: glances
+            url: http://192.168.2.2:61208
+            metric: network:eth1
+            version: 4
+            diskUnits: bytes
+            refreshInterval: 5000
+            pointsLimit: 15
+      - ZFS Pool:
+          widget:
+            type: glances
+            url: http://192.168.2.2:61208
+            metric: fs:/mnt/ssd
+            version: 4
+            diskUnits: bytes
+            refreshInterval: 5000
+            pointsLimit: 15
+      - Array:
+          widget:
+            type: glances
+            url: http://192.168.2.2:61208
+            metric: fs:/mnt/user/library
+            version: 4
+            diskUnits: bytes
+            refreshInterval: 5000
+            pointsLimit: 15
