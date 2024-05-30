@@ -24,8 +24,12 @@ providers:
   weatherapi: weatherapiapikey
 
 layout:
+  Security:
+    tab: Services
+  Productivity:
+    tab: Services
   Media:
-    tab: First
+    tab: Services
     style: row
     columns: 4
   Unraid:
