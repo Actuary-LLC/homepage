@@ -74,3 +74,28 @@
           diskUnits: bytes
           refreshInterval: 5000
           pointsLimit: 15
+- Coral:
+    - CPU Usage:
+        widget:
+          type: glances
+          url: http://192.168.2.3:61208
+          version: 4
+          metric: cpu
+          diskUnits: bytes
+          refreshInterval: 5000
+          pointsLimit: 15
+    - Processes:
+        widget:
+          type: glances
+          url: http://192.168.2.3:61208
+          metric: process
+          version: 4
+    - Network Usage:
+        widget:
+          type: glances
+          url: http://192.168.2.3:61208
+          metric: network:enp2s0f0
+          version: 4
+          diskUnits: bytes
+          refreshInterval: 5000
+          pointsLimit: 15
