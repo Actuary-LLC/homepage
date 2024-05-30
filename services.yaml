@@ -49,7 +49,7 @@
         widget:
           type: glances
           url: http://192.168.2.2:61208
-          metric: fs:/mnt/disk1
+          metric: disk:/mnt/disks
           version: 4
           diskUnits: bytes
           refreshInterval: 5000
