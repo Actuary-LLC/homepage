@@ -28,6 +28,8 @@ layout:
     tab: Containers
   Productivity:
     tab: Containers
+  Data
+    tab: Containers
   Media:
     tab: Containers
     style: row
