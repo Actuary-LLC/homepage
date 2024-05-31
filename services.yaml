@@ -11,10 +11,11 @@
 - Data:
     - Postgres:
         href: http://unraid.lan:8080
+        icon: https://github.com/Actuary-LLC/homepage/blob/main/images/postgres.svg
         description: Adminer access to Postgres database
 #- Group A:
 #    - Postgres:
-#        #icon: https://github.com/Actuary-LLC/homepage/blob/main/images/postgres.svg
+#        #
 #        href: http://unraid.lan:8080
 #        description: Adminer access to Postgres database
 
