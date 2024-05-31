@@ -101,7 +101,7 @@
           url: http://192.168.2.3:61208
           metric: memory
           version: 4
-    - Temperature:
+    - Core Temperature:
         widget:
           type: glances
           url: http://192.168.2.3:61208
@@ -113,7 +113,7 @@
           url: http://192.168.2.3:61208
           metric: process
           version: 4
-    - Network Usage:
+    - Network:
         widget:
           type: glances
           url: http://192.168.2.3:61208
