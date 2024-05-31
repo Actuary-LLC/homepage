@@ -16,12 +16,30 @@
 
 #Hardware - Services
 - Unraid:
+    - Info:
+        widget:
+          type: glances
+          url: http://192.168.2.2:61208
+          version: 4
+          metric: info
+          diskUnits: bytes
+          refreshInterval: 5000
+          pointsLimit: 15
     - CPU Usage:
         widget:
           type: glances
           url: http://192.168.2.2:61208
           version: 4
           metric: cpu
+          diskUnits: bytes
+          refreshInterval: 5000
+          pointsLimit: 15
+    - RAM:
+        widget:
+          type: glances
+          url: http://192.168.2.2:61208
+          version: 4
+          metric: memory
           diskUnits: bytes
           refreshInterval: 5000
           pointsLimit: 15
