@@ -13,6 +13,8 @@
 #        href: http://unraid.lan:8080
 #        description: Adminer access to Postgres database
 
+
+#Hardware - Services
 - Unraid:
     - CPU Usage:
         widget:
@@ -75,6 +77,15 @@
           refreshInterval: 5000
           pointsLimit: 15
 - Coral:
+    - System:
+        widget:
+          type: glances
+          url: http://192.168.2.3:61208
+          version: 4
+          metric: info
+          diskUnits: bytes
+          refreshInterval: 5000
+          pointsLimit: 15
     - CPU Usage:
         widget:
           type: glances
@@ -84,6 +95,18 @@
           diskUnits: bytes
           refreshInterval: 5000
           pointsLimit: 15
+    - Memory:
+        widget:
+          type: glances
+          url: http://192.168.2.3:61208
+          metric: memory
+          version: 4
+    - Temperature:
+        widget:
+          type: glances
+          url: http://192.168.2.3:61208
+          metric: sensor:Tctl
+          version: 4
     - Processes:
         widget:
           type: glances

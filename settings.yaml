@@ -37,3 +37,8 @@ layout:
     icon: https://raw.githubusercontent.com/Actuary-LLC/homepage/5ee29b69f6c410ffaaa6f374680a996f50557c52/images/unraid.svg
     style: row
     columns: 4
+  Coral:
+    tab: Hardware
+    icon: https://github.com/Actuary-LLC/homepage/blob/main/images/coral.png?raw=true
+    style: row
+    columns: 4
