@@ -29,7 +29,7 @@
           version: 4
           metric: info
           diskUnits: bytes
-          refreshInterval: 5000
+          refreshInterval: 1000
           pointsLimit: 15
     - Core Temperature:
         widget:
@@ -50,7 +50,7 @@
           metric: network:eth1
           version: 4
           diskUnits: bytes
-          refreshInterval: 5000
+          refreshInterval: 1000
           pointsLimit: 15
     - CPU Usage:
         widget:
@@ -59,7 +59,7 @@
           version: 4
           metric: cpu
           diskUnits: bytes
-          refreshInterval: 5000
+          refreshInterval: 1000
           pointsLimit: 15
     - RAM:
         widget:
@@ -68,7 +68,7 @@
           version: 4
           metric: memory
           diskUnits: bytes
-          refreshInterval: 5000
+          refreshInterval: 1000
           pointsLimit: 15
 
     - ZFS Pool:
@@ -78,7 +78,7 @@
           metric: fs:/mnt/ssd
           version: 4
           diskUnits: bytes
-          refreshInterval: 5000
+          refreshInterval: 1000
           pointsLimit: 15
     - Array Disk 1:
         widget:
@@ -87,7 +87,7 @@
           metric: disk:dm-1
           version: 4
           diskUnits: bytes
-          refreshInterval: 5000
+          refreshInterval: 1000
           pointsLimit: 15
     - Array Disk 2:
         widget:
@@ -96,7 +96,7 @@
           metric: disk:sdb
           version: 4
           diskUnits: bytes
-          refreshInterval: 5000
+          refreshInterval: 1000
           pointsLimit: 15
     - Array Disk 3:
         widget:
@@ -105,7 +105,7 @@
           metric: fs:/mnt/disk3
           version: 4
           diskUnits: bytes
-          refreshInterval: 5000
+          refreshInterval: 1000
           pointsLimit: 15
 - Coral:
     - System:
@@ -124,7 +124,7 @@
           version: 4
           metric: process
           diskUnits: bytes
-          refreshInterval: 5000
+          refreshInterval: 1000
           pointsLimit: 15
     - Core Temperature:
         widget:
@@ -139,7 +139,7 @@
           metric: network:eth0
           version: 4
           diskUnits: bytes
-          refreshInterval: 5000
+          refreshInterval: 1000
           pointsLimit: 15
     - CPU Usage:
         widget:
@@ -148,7 +148,7 @@
           version: 4
           metric: cpu
           diskUnits: bytes
-          refreshInterval: 5000
+          refreshInterval: 1000
           pointsLimit: 15
     - Memory:
         widget:
@@ -156,3 +156,6 @@
           url: http://192.168.2.3:61208
           metric: memory
           version: 4
+          diskUnits: bytes
+          refreshInterval: 1000
+          pointsLimit: 15
