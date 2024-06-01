@@ -34,7 +34,7 @@
     - Core Temperature:
         widget:
           type: glances
-          url: http://192.168.2.3:61208
+          url: http://192.168.2.2:61208
           metric: sensor:Package id 0
           version: 4
     - Processes:
@@ -59,7 +59,7 @@
           version: 4
           metric: cpu
           diskUnits: bytes
-          refreshInterval: 1000
+          refreshInterval: 200
           pointsLimit: 15
     - RAM:
         widget:
@@ -70,7 +70,6 @@
           diskUnits: bytes
           refreshInterval: 1000
           pointsLimit: 15
-
     - ZFS Pool:
         widget:
           type: glances
@@ -80,16 +79,17 @@
           diskUnits: bytes
           refreshInterval: 1000
           pointsLimit: 15
-    - Array Disk 1:
+- Unraid Array:
+    - Array Parity:
         widget:
           type: glances
           url: http://192.168.2.2:61208
-          metric: disk:dm-1
+          metric: disk:sdi
           version: 4
           diskUnits: bytes
           refreshInterval: 1000
           pointsLimit: 15
-    - Array Disk 2:
+    - Array Disk 1:
         widget:
           type: glances
           url: http://192.168.2.2:61208
@@ -98,11 +98,20 @@
           diskUnits: bytes
           refreshInterval: 1000
           pointsLimit: 15
+    - Array Disk 2:
+        widget:
+          type: glances
+          url: http://192.168.2.2:61208
+          metric: disk:sdc
+          version: 4
+          diskUnits: bytes
+          refreshInterval: 1000
+          pointsLimit: 15
     - Array Disk 3:
         widget:
           type: glances
           url: http://192.168.2.2:61208
-          metric: fs:/mnt/disk3
+          metric: disk:sdh
           version: 4
           diskUnits: bytes
           refreshInterval: 1000
