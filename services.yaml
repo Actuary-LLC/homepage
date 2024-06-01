@@ -31,6 +31,27 @@
           diskUnits: bytes
           refreshInterval: 5000
           pointsLimit: 15
+    - Core Temperature:
+        widget:
+          type: glances
+          url: http://192.168.2.3:61208
+          metric: sensor:Package id 0
+          version: 4
+    - Processes:
+        widget:
+          type: glances
+          url: http://192.168.2.2:61208
+          metric: process
+          version: 4
+    - Network Usage:
+        widget:
+          type: glances
+          url: http://192.168.2.2:61208
+          metric: network:eth1
+          version: 4
+          diskUnits: bytes
+          refreshInterval: 5000
+          pointsLimit: 15
     - CPU Usage:
         widget:
           type: glances
@@ -49,21 +70,7 @@
           diskUnits: bytes
           refreshInterval: 5000
           pointsLimit: 15
-    - Processes:
-        widget:
-          type: glances
-          url: http://192.168.2.2:61208
-          metric: process
-          version: 4
-    - Network Usage:
-        widget:
-          type: glances
-          url: http://192.168.2.2:61208
-          metric: network:eth1
-          version: 4
-          diskUnits: bytes
-          refreshInterval: 5000
-          pointsLimit: 15
+
     - ZFS Pool:
         widget:
           type: glances
@@ -77,7 +84,7 @@
         widget:
           type: glances
           url: http://192.168.2.2:61208
-          metric: disk:/mnt/user/library
+          metric: disk:dm-1
           version: 4
           diskUnits: bytes
           refreshInterval: 5000
@@ -86,7 +93,7 @@
         widget:
           type: glances
           url: http://192.168.2.2:61208
-          metric: fs:/mnt/user0/library
+          metric: disk:sdb
           version: 4
           diskUnits: bytes
           refreshInterval: 5000
