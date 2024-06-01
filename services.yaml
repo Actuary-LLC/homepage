@@ -101,21 +101,24 @@
           refreshInterval: 5000
           pointsLimit: 15
 - Coral:
-    - CPU Usage:
+    - System:
         widget:
           type: glances
           url: http://192.168.2.3:61208
           version: 4
-          metric: cpu
+          metric: info
           diskUnits: bytes
           refreshInterval: 5000
           pointsLimit: 15
-    - Memory:
+    - Processes:
         widget:
           type: glances
           url: http://192.168.2.3:61208
-          metric: memory
           version: 4
+          metric: process
+          diskUnits: bytes
+          refreshInterval: 5000
+          pointsLimit: 15
     - Core Temperature:
         widget:
           type: glances
@@ -131,3 +134,18 @@
           diskUnits: bytes
           refreshInterval: 5000
           pointsLimit: 15
+    - CPU Usage:
+        widget:
+          type: glances
+          url: http://192.168.2.3:61208
+          version: 4
+          metric: cpu
+          diskUnits: bytes
+          refreshInterval: 5000
+          pointsLimit: 15
+    - Memory:
+        widget:
+          type: glances
+          url: http://192.168.2.3:61208
+          metric: memory
+          version: 4
