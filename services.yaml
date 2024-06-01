@@ -129,7 +129,7 @@
         widget:
           type: glances
           url: http://192.168.2.3:61208
-          metric: network:enp2s0f0
+          metric: network:eth0
           version: 4
           diskUnits: bytes
           refreshInterval: 5000
