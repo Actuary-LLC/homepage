@@ -168,7 +168,7 @@
           refreshInterval: 1000
           pointsLimit: 15
 - Vortex:
-    - Proxmox:
+    - Proxmox VE:
         widget:
           type: proxmox
           url: http://192.168.209.195:8006
