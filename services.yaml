@@ -175,7 +175,7 @@
     - Proxmox VE:
         widget:
           type: proxmox
-          url: http://192.168.209.195:8006
+          url: https://192.168.209.195:8006
           username: ${VORTEX_PROXMOX_TOKEN_ID}
           password: ${VORTEX_PROXMOX_SECRET}
           #node: pve-1 # optional
