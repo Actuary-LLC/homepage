@@ -24,6 +24,8 @@ jobs:
     env:
       TAG: ${{ github.sha }}
       OPENWEATHER_API_TOKEN: ${{ secrets.OPENWEATHER_API_TOKEN }}
+      VORTEX_PROXMOX_TOKEN_ID: ${{ vars.VORTEX_PROXMOX_TOKEN_ID }}
+      VORTEX_PROXMOX_SECRET: ${{ secrets.VORTEX_PROXMOX_SECRET }}
     steps:
       - name: Configure application
         run: |
