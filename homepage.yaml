@@ -48,5 +48,8 @@ services:
       placement:
         constraints:
           - node.role == manager
+      labels:
+        ## DIUN
+        - diun.enable=true
     networks:
       - reverse-proxy
