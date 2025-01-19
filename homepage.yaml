@@ -24,7 +24,7 @@ configs:
 
 services:
   homepage:
-    image: ghcr.io/gethomepage/homepage:v0.10.19
+    image: ghcr.io/gethomepage/homepage:v0.10.9
     configs:
       - source: docker
         target: /app/config/docker.yaml
