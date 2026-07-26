@@ -49,6 +49,12 @@ services:
         constraints:
           - node.role == manager
       labels:
+        ## Proxy
+        - traefik.enable=true
+        - traefik.http.routers.homepage.rule=Host(`homepage.lan`)
+        - traefik.http.routers.homepage.entrypoints=web
+        - traefik.http.routers.homepage.service=homepage
+        - traefik.http.services.homepage.loadbalancer.server.port=3000
         ## DIUN
         - diun.enable=true
         - diun.notify_on=new
