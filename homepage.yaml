@@ -23,8 +23,10 @@ configs:
 
 
 services:
-  homepage:
+  main:
     image: ghcr.io/gethomepage/homepage:v1.13.2
+    environment:
+      - HOMEPAGE_ALLOWED_HOSTS=homepage.lan
     configs:
       - source: docker
         target: /app/config/docker.yaml
