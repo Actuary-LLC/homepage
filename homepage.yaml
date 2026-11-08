@@ -53,9 +53,11 @@ services:
       labels:
         ## Proxy
         - traefik.enable=true
-        - traefik.http.routers.homepage.rule=Host(`homepage.lan`)
-        - traefik.http.routers.homepage.entrypoints=web
+        - traefik.http.routers.homepage.rule=Host(`homepage.actuary.dev`)
+        - traefik.http.routers.homepage.entrypoints=websecure
         - traefik.http.routers.homepage.service=homepage
+        - traefik.http.routers.homepage.tls=true
+        - traefik.http.routers.homepage.tls.certresolver=myresolver
         - traefik.http.services.homepage.loadbalancer.server.port=3000
         - traefik.http.routers.homepage.middlewares=lan-only@file
         ## DIUN
