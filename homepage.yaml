@@ -26,7 +26,7 @@ services:
   main:
     image: ghcr.io/gethomepage/homepage:v1.13.2
     environment:
-      - HOMEPAGE_ALLOWED_HOSTS=homepage.lan
+      - HOMEPAGE_ALLOWED_HOSTS=homepage.actuary.dev
     configs:
       - source: docker
         target: /app/config/docker.yaml
