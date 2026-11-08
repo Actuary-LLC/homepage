@@ -26,7 +26,7 @@ services:
   main:
     image: ghcr.io/gethomepage/homepage:v2.70.0
     environment:
-      - HOMEPAGE_ALLOWED_HOSTS=homepage.lan
+      - HOMEPAGE_ALLOWED_HOSTS=homepage.actuary.dev
     configs:
       - source: docker
         target: /app/config/docker.yaml
@@ -38,8 +38,8 @@ services:
         target: /app/config/widgets.yaml
       - source: services
         target: /app/config/services.yaml
-    ports:
-      - 3000:3000
+    # No published ports (hardening): accessed via traefik at http://homepage.lan.
+    ports: []
     volumes:
       - /mnt/user/docker/volumes/homepage/logs:/app/config/logs # Make sure your local config directory exists
       - /var/run/docker.sock:/var/run/docker.sock # (optional) For docker integrations, see alternative methods
@@ -53,10 +53,13 @@ services:
       labels:
         ## Proxy
         - traefik.enable=true
-        - traefik.http.routers.homepage.rule=Host(`homepage.lan`)
-        - traefik.http.routers.homepage.entrypoints=web
+        - traefik.http.routers.homepage.rule=Host(`homepage.actuary.dev`)
+        - traefik.http.routers.homepage.entrypoints=websecure
         - traefik.http.routers.homepage.service=homepage
+        - traefik.http.routers.homepage.tls=true
+        - traefik.http.routers.homepage.tls.certresolver=myresolver
         - traefik.http.services.homepage.loadbalancer.server.port=3000
+        - traefik.http.routers.homepage.middlewares=lan-only@file
         ## DIUN
         - diun.enable=true
         - diun.notify_on=new
