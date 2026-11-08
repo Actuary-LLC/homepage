@@ -38,8 +38,8 @@ services:
         target: /app/config/widgets.yaml
       - source: services
         target: /app/config/services.yaml
-    ports:
-      - 3000:3000
+    # No published ports (hardening): accessed via traefik at http://homepage.lan.
+    ports: []
     volumes:
       - /mnt/user/docker/volumes/homepage/logs:/app/config/logs # Make sure your local config directory exists
       - /var/run/docker.sock:/var/run/docker.sock # (optional) For docker integrations, see alternative methods
