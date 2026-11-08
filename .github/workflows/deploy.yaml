@@ -6,7 +6,7 @@ on:
       - main
 jobs:
   deploy-homepage:
-    runs-on: [traefik]
+    runs-on: [coral]
     env:
       TAG: ${{ github.sha }}
       OPENWEATHER_API_TOKEN: ${{ secrets.OPENWEATHER_API_TOKEN }}
@@ -27,7 +27,7 @@ jobs:
           cat services.yaml
       - name: Remove and redeploy services
         run: |
-          SERVICES=("homepage_homepage") 
+          SERVICES=("homepage_main") 
           for SERVICE_NAME in "${SERVICES[@]}"; do
             if docker service ls | grep -q $SERVICE_NAME; then
               docker service rm $SERVICE_NAME;
