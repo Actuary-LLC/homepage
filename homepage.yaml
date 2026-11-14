@@ -26,7 +26,10 @@ services:
   main:
     image: ghcr.io/gethomepage/homepage:v1.13.2
     environment:
-      - HOMEPAGE_ALLOWED_HOSTS=homepage.actuary.dev
+      # localhost/127.0.0.1 are required so the container's own healthcheck
+      # (which probes with Host: localhost) is not rejected by the allowed-hosts
+      # check - a failing healthcheck gets the task killed by swarm in a loop.
+      - HOMEPAGE_ALLOWED_HOSTS=homepage.actuary.dev,localhost,127.0.0.1
     configs:
       - source: docker
         target: /app/config/docker.yaml
